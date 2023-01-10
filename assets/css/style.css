@@ -1,0 +1,264 @@
+@font-face {
+    font-family: karla;
+    src: url(../fonts/Karla-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: karlaitalic;
+    src: url(../fonts/Karla-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: karlabold;
+    src: url(../fonts/Karla-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Font: Karla */
+/* Farbe: #323A45 / #848484 */
+
+body {
+    width: 1440px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    font-family: karlabold;
+}
+
+nav h1 {
+    font-size: 1.2rem;
+}
+
+nav a {
+    padding-left: 3vw;
+    text-decoration: none;
+    color:black;
+}
+
+.menu-bar {
+    background-color: none;
+    display: none;
+}
+
+/* Section - Grid One  */
+
+.brand {
+    font-size: .9rem;
+    color:#848484;
+    font-family: karla;
+}
+
+
+main section {
+    display: grid;
+    gap: 2vh 2vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(3, 0.85fr);
+    margin-bottom: 3vh;
+    grid-template-areas: 
+    "top top top"
+    "mid1 mid2 mid3"
+    "bot1 bot2 bot3"
+    ;
+}
+
+main section div {
+    display: flex;
+    justify-content: space-between;
+    font-family: karlabold;
+    color: #323A45;
+    margin-top: 1vh;
+}
+
+.bigProduct {
+    grid-area: top;
+}
+
+/* Section - Grid Two  */
+
+.bigProduct {
+    grid-area: top;
+}
+
+/* Section - Grid Three */
+
+.gridThree{
+    grid-template-areas: 
+    "top top top"
+    ;
+}
+
+.bigProduct {
+    grid-area: top;
+}
+
+/* Section - Grid Four */
+
+.gridFour{
+    grid-template-areas: 
+    "top top top"
+    ;
+}
+
+/* Section - Grid Five*/
+.gridFive {
+    display: grid;
+    gap: 2vh 2vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(2, 0.85fr);
+    margin-bottom: 5vh;
+    grid-template-areas: 
+    "top top top"
+    "mid1 mid2 mid3"
+    ;
+}
+
+.gridFive{
+    grid-template-areas: 
+    "top top top"
+    ;
+}
+
+/* Footer Section - Grid */
+
+footer section {
+    display: grid;
+    margin-bottom: 3vh;
+    color: #323A45;
+    font-family: karla;
+    font-size: 1rem;
+    grid-template-columns: 1.4fr 0.75fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "topOne topTwo topThree topFour"
+    ;
+}
+
+.botNav article div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2vh;
+}
+
+.botNav div a {
+    text-decoration: none;
+    font-family:karlabold;
+    color:#323A45;
+}
+
+.botNav span {
+    font-weight: bold;
+}
+
+.newsletter p:nth-of-type(1) {
+    font-weight: bold;
+}
+.newsletter p:nth-of-type(1) a {
+    color: black;
+    font-weight: bolder;
+}
+
+.newsletter p:nth-of-type(2) {
+    font-style: italic;
+}
+
+.copyright {
+    margin-bottom: 2vh;
+    color: #848484;
+    font-family: karla;
+    font-size: 0.9rem;
+}
+
+
+/* Hover -  change color of Pictures */
+
+main a:hover {
+    opacity:0.2;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 900px) {
+    
+    body {
+        width: 900px;
+    }
+
+    main section {
+        grid-template-columns: repeat(3, 0.3fr);
+        grid-template-rows:repeat(3, 0.75fr);
+    }
+
+    .gridFive {
+        grid-template-columns: repeat(3, 0.3fr);
+        grid-template-rows:repeat(2, 0.75fr);
+        margin-bottom: 5vh;
+    }
+
+    footer section {
+        grid-template-columns: repeat(4, 0.25fr);
+        font-size: 0.9rem;
+    }
+
+    header nav section{
+        display: none;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 320px) {
+        
+    body {
+        width: 320px;
+    }
+
+    main section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        font-size: 0.7rem;
+    }
+
+    .brand {
+        font-size: .6rem;
+        color:#848484;
+        font-family: karla;
+    }
+
+    .gridFive {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    footer section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        font-size: 0.8rem;
+    }
+
+    footer article {
+        margin-bottom: 2vh;
+    }
+
+    .copyright {
+        font-size: 0.6rem;
+    }
+}
