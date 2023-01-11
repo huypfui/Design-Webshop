@@ -46,7 +46,6 @@ nav a {
 }
 
 .menu-bar {
-    background-color: none;
     display: none;
 }
 
@@ -195,12 +194,12 @@ main a:hover {
     }
 
     main section {
-        grid-template-columns: repeat(3, 0.3fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows:repeat(3, 0.75fr);
     }
 
     .gridFive {
-        grid-template-columns: repeat(3, 0.3fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows:repeat(2, 0.75fr);
         margin-bottom: 5vh;
     }
@@ -229,7 +228,6 @@ main a:hover {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 80%;
         font-size: 0.7rem;
     }
 
@@ -243,14 +241,12 @@ main a:hover {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 80%;
     }
 
     footer section {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 80%;
         font-size: 0.8rem;
     }
 
